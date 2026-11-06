@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tamsin L. Silver | The Curse of Billy the Kid</title>
+<meta name="description" content="A homepage idea for Tamsin L. Silver, author of the Untold Legends series.">
+<meta property="og:title" content="Tamsin L. Silver | The Curse of Billy the Kid">
+<meta property="og:description" content="A homepage idea made by Sparsh Saini for Tamsin L. Silver. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/tamsinsilver/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/corner.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* Palette from The Curse of Billy the Kid cover: the sun, the burnt sky, the title tan (paper is that tan lightened, not a default cream), the railroad dark. unslop-ignore */
+:root{
+  --sun:#F4B63A; --sky:#D9661E; --tan:#EFC08E; --paper:#F6E2C6;
+  --ink:#1B140F; --earth:#2E2118; --dust:#8A6646;
+  --display:"Oswald", "Arial Narrow", sans-serif; --text:"Old Standard TT", Georgia, serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ink);color:var(--paper);font:400 1.125rem/1.65 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0}
+.skip:focus{left:8px;top:8px;background:var(--paper);color:var(--ink);padding:.4rem .8rem;z-index:5}
+.strip{background:var(--earth);color:var(--tan);font-size:.85rem;text-align:center;padding:.5rem 1rem}
+
+/* Buttons take the cover frame's double rule */
+.btn{display:inline-flex;align-items:center;min-height:44px;font:600 1rem/1 var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--ink);background:var(--tan);padding:.8rem 1.15rem;text-decoration:none;border:1px solid var(--tan);outline:1px solid var(--tan);outline-offset:3px} /* slop-ok: caps Oswald is the cover's own author-name lettering */
+.btn.alt{background:transparent;color:var(--tan)}
+.btn:hover{background:var(--sun);border-color:var(--sun);outline-color:var(--sun);color:var(--ink)}
+.btn:focus-visible{outline:3px solid var(--sun)}
+
+/* Hero */
+.hero{position:relative;height:360vh;background:var(--ink)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;grid-template-columns:1fr minmax(0,min(50vh,38vw)) 1fr;align-items:center;column-gap:4vw;padding:0 5vw}
+.book{grid-column:2;position:relative;overflow:hidden;aspect-ratio:2/3;width:100%;transform-origin:51% 24%;will-change:transform;box-shadow:0 30px 60px -24px rgba(0,0,0,.8)}
+.book img{position:absolute;left:0;width:100%;height:auto}
+.book .plate,.book .land,.book .full{top:0;height:100%}
+.book .land{transform-origin:50% 100%;will-change:transform}
+.book .skull{top:11%;left:14%;width:74.3%;opacity:0;will-change:transform,opacity;transform-origin:50% 40%}
+.book .full{opacity:0}
+.words{grid-column:1;max-width:23rem;justify-self:end;opacity:0;will-change:transform,opacity}
+.words .vol{font:italic 400 1.05rem/1.3 var(--text);color:var(--sun);margin:0 0 .5rem}
+.words h1{text-wrap:balance;font:700 clamp(2.4rem,4.4vw,4rem)/1 var(--display);text-transform:uppercase;color:var(--tan);margin:0 0 1rem}
+.words p{margin:0 0 1.3rem}
+.words .line{font-style:italic;font-size:1.3rem}
+.words .buy{display:flex;flex-wrap:wrap;gap:.9rem}
+.side{grid-column:3;max-width:17rem;opacity:0;will-change:opacity}
+.side p{margin:0 0 1rem;font-size:1rem}
+
+/* Calm sections */
+section.band{padding:clamp(4rem,9vw,7rem) 6vw}
+.wrap{max-width:68rem;margin:0 auto}
+h2{text-wrap:balance;font:700 clamp(2rem,4vw,3.2rem)/1.02 var(--display);text-transform:uppercase;margin:0 0 1.2rem;color:var(--tan)}
+.buy{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.6rem}
+
+.eras{background:var(--paper);color:var(--ink)}
+.eras h2{color:var(--earth)}
+.eras .pair{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:3px double var(--dust);border-bottom:3px double var(--dust);margin:2rem 0}
+.eras .pair div{padding:1.8rem 2rem 1.8rem 0}
+.eras .pair div+div{padding:1.8rem 0 1.8rem 2rem;border-left:1px solid var(--dust)}
+.eras .year{font:700 clamp(3rem,7vw,5.5rem)/1 var(--display);color:#A84A16;margin:0 0 .6rem}
+.eras blockquote{margin:0;max-width:36rem;font-size:1.3rem;line-height:1.4}
+.eras cite{display:block;font-size:.95rem;font-style:normal;margin-top:.5rem;color:var(--earth)}
+.eras .btn{background:var(--earth);color:var(--paper);border-color:var(--earth);outline-color:var(--earth)}
+.eras .btn.alt{background:transparent;color:var(--earth)}
+.eras .btn:hover{background:var(--sky);border-color:var(--sky);outline-color:var(--sky);color:var(--ink)}
+
+.legends .row{display:grid;grid-template-columns:7rem 1fr auto;gap:2rem;align-items:center;padding:1.6rem 0;border-top:1px solid rgba(239,192,142,.3)}
+.legends .row:last-child{border-bottom:1px solid rgba(239,192,142,.3)}
+.legends .row img{box-shadow:0 14px 30px -14px #000}
+.legends h3{font:600 1.5rem/1.1 var(--display);text-transform:uppercase;margin:0 0 .3rem;color:var(--tan)}
+.legends .n{font:italic 400 1rem/1.2 var(--text);color:var(--sun);margin:0 0 .3rem}
+.legends p{margin:0}
+
+.platinum{background:var(--sky);color:var(--ink)}
+.platinum .wrap{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:start}
+.platinum .count{font:700 clamp(6rem,16vw,11rem)/.85 var(--display);color:var(--ink);margin:0}
+.platinum .count small{display:block;font-size:1.1rem;letter-spacing:.06em;text-transform:uppercase;margin-top:.8rem} /* slop-ok: carries the count */
+.platinum h2{color:var(--ink)}
+.platinum .btn{background:var(--ink);color:var(--tan);border-color:var(--ink);outline-color:var(--ink)}
+.platinum .btn:hover{background:var(--earth);color:var(--sun)}
+
+.lincoln{background:var(--earth)}
+.lincoln .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
+.lincoln figure{margin:0}
+.lincoln figcaption{font-size:.9rem;color:var(--tan);margin-top:.6rem}
+
+.worlds ul{list-style:none;margin:0;padding:0;columns:2;column-gap:4rem}
+.worlds li{break-inside:avoid;padding:1rem 0;border-top:1px solid rgba(239,192,142,.3)}
+.worlds li a{font:600 1.3rem/1.2 var(--display);text-transform:uppercase;color:var(--tan);text-decoration:none}
+.worlds li a:hover{color:var(--sun)}
+.worlds li p{margin:.3rem 0 0;font-size:1rem}
+
+.about{background:var(--paper);color:var(--ink)}
+.about h2{color:var(--earth)}
+.about .wrap{max-width:44rem}
+
+.close{background:var(--ink)}
+.close .wrap{max-width:44rem}
+.close p{margin:0 0 1rem}
+
+footer{background:var(--earth);color:var(--tan);font-size:.85rem;padding:1.5rem 6vw 2rem}
+
+/* Contents: the cover's corner flourish as a button */
+.toc{position:fixed;right:14px;bottom:14px;z-index:4}
+.toc summary{list-style:none;cursor:pointer;width:64px;height:64px;border:1px solid var(--tan);outline:1px solid var(--tan);outline-offset:3px;background:var(--ink)}
+.toc summary::-webkit-details-marker{display:none}
+.toc summary img{width:100%;height:100%;object-fit:cover}
+.toc summary:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-color:var(--sun)}
+.toc[open] summary{outline-color:var(--sun);border-color:var(--sun)}
+.toc nav{position:absolute;right:0;bottom:78px;background:var(--ink);border:1px solid var(--tan);outline:1px solid var(--tan);outline-offset:3px;padding:.8rem 1.2rem;min-width:13rem}
+.toc nav a{display:block;font:600 1rem/1 var(--display);text-transform:uppercase;letter-spacing:.04em;color:var(--tan);text-decoration:none;padding:.7rem 0} /* slop-ok: nav in the cover lettering */
+.toc nav a:hover{color:var(--sun)}
+
+@media (max-height:560px){.words .line{display:none}.words h1{font-size:1.8rem}}
+@media (max-width:820px) and (max-height:560px){
+  .stage.stage{grid-template-columns:auto minmax(0,1fr);grid-template-rows:1fr;column-gap:5vw;align-items:center}
+  .book.book{grid-column:1;grid-row:1;width:min(40vw,56vh)}
+  .words.words{grid-column:2;grid-row:1;text-align:left;justify-self:start}
+  .words.words .buy{justify-content:flex-start}
+  .words.words h1{font-size:1.6rem}
+}
+@media (max-width:820px){
+  .hero{height:320vh}
+  .stage{grid-template-columns:1fr;grid-template-rows:auto auto;align-content:center;row-gap:1.3rem;padding:0 6vw 84px}
+  .book{grid-column:1;grid-row:1;width:min(64vw,44vh);justify-self:center;transform-origin:51% 17%}
+  .words{grid-column:1;grid-row:2;justify-self:center;text-align:center;max-width:22rem}
+  .words .vol{margin-bottom:.4rem}
+  .words h1{font-size:2rem;margin-bottom:.5rem}
+  .words .line{font-size:1.05rem;margin-bottom:.9rem}
+  .words .buy{justify-content:center}
+  .side{display:none}
+  .eras .pair{grid-template-columns:1fr}
+  .eras .pair div,.eras .pair div+div{padding:1.4rem 0;border-left:0}
+  .eras .pair div+div{border-top:1px solid var(--dust)}
+  .legends .row{grid-template-columns:5rem 1fr;gap:1.2rem}
+  .legends .row .btn{grid-column:2;justify-self:start}
+  .platinum .wrap,.lincoln .wrap{grid-template-columns:1fr;gap:2rem}
+  .worlds ul{columns:1}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#eras">Skip to the book</a>
+<div class="strip">A homepage idea made by Sparsh Saini for Tamsin L. Silver. Not their official site.</div>
+
+<header class="hero" id="hero">
+  <div class="stage">
+    <div class="words">
+      <p class="vol">Untold Legends, volume one</p>
+      <h1>The Curse of Billy the Kid</h1>
+      <p class="line">These are the Untold Legends.</p>
+      <div class="buy">
+        <a class="btn" href="https://www.amazon.com/dp/B0882QVG6S">Amazon</a>
+        <a class="btn alt" href="https://www.audible.com/pd/The-Curse-of-Billy-the-Kid-Audiobook/B0DTB3LF1W">Audiobook</a>
+      </div>
+    </div>
+    <div class="book" role="img" aria-label="The cover of The Curse of Billy the Kid by Tamsin L. Silver: a gunslinger stands on railroad tracks in the desert, half burnt into smoke, under a setting sun with a skull in the sky.">
+      <img class="plate" src="img/plate.jpg" alt="" width="1200" height="1800" fetchpriority="high">
+      <img class="skull" src="img/skull.webp" alt="" width="892" height="452">
+      <img class="land" src="img/land.webp" alt="" width="1200" height="1800">
+      <img class="full" src="img/cover.jpg" alt="" width="1200" height="1800">
+    </div>
+    <div class="side">
+      <a class="btn alt" href="#legends">All three books</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="band eras" id="eras">
+  <div class="wrap">
+    <h2>Lincoln County, twice</h2>
+    <div class="pair">
+      <div>
+        <p class="year">1878</p>
+        <p>John Tunstall is dead and the Lincoln County War has begun. Billy rides with the Regulators against the Santa Fe Ring, and a young man with a quick temper finds out that worse things than outlaws walk the Old West.</p>
+      </div>
+      <div>
+        <p class="year">1949</p>
+        <p>Billy is William Kidwell, a federal agent. He's back in Lincoln County, New Mexico, to face the demons of his past and take his soul back from the immortal witch Scáthach.</p>
+      </div>
+    </div>
+    <blockquote>“I'm a FANTASY AUTHOR. I have that in caps for the people in the back.”<cite>Tamsin, on her Untold Legends page</cite></blockquote>
+    <div class="buy">
+      <a class="btn" href="https://www.amazon.com/dp/B0882QVG6S">Amazon, all formats</a>
+      <a class="btn alt" href="https://www.barnesandnoble.com/w/the-curse-of-billy-the-kid-tamsin-l-silver/1136980894?ean=9781645540489">Barnes &amp; Noble</a>
+      <a class="btn alt" href="https://www.audible.com/pd/The-Curse-of-Billy-the-Kid-Audiobook/B0DTB3LF1W">Audible</a>
+    </div>
+  </div>
+</section>
+
+<section class="band legends" id="legends">
+  <div class="wrap">
+    <h2>The Untold Legends</h2>
+    <div class="row">
+      <img src="img/cover.jpg" alt="The Curse of Billy the Kid cover." width="1200" height="1800" loading="lazy">
+      <div><p class="n">Volume one</p><h3>The Curse of Billy the Kid</h3><p>Lincoln County, 1878 and 1949. Where it all began.</p></div>
+      <a class="btn alt" href="https://www.amazon.com/dp/B0882QVG6S">Amazon</a>
+    </div>
+    <div class="row">
+      <img src="img/brewer.jpg" alt="The Torment of Richard Brewer cover: a gunslinger crumbling to ash under a violet sky." width="600" height="900" loading="lazy">
+      <div><p class="n">Volume two</p><h3>The Torment of Richard Brewer</h3><p>Las Cruces, 1949. A missing agent, a dirty sheriff working with demons, and it's Lincoln all over again.</p></div>
+      <a class="btn alt" href="https://www.amazon.com/Torment-Richard-Brewer-Untold-Legends-ebook/dp/B08GL7YST4">Amazon</a>
+    </div>
+    <div class="row">
+      <img src="img/coogler.jpg" alt="The Murder of Cricket Coogler cover: a skull face under a cowboy hat and scarf." width="600" height="900" loading="lazy">
+      <div><p class="n">Volume three</p><h3>The Murder of Cricket Coogler</h3><p>Back to Las Cruces with the Regulators, to find out who killed Ovida “Cricket” Coogler and send Scáthach back to the Otherworld.</p></div>
+      <a class="btn alt" href="https://www.amazon.com/Murder-Cricket-Coogler-Tamsin-Silver/dp/1645541266">Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section class="band platinum">
+  <div class="wrap">
+    <p class="count">100<small>copies, then no more</small></p>
+    <div>
+      <h2>The Platinum Collectors Edition</h2>
+      <p>All three Untold Legends in one black hardcover, print only. Every copy has a page inside with its number out of 100.</p>
+      <p>Order from Falstaff and it comes with a bookplate Tamsin signed. Buy one from Tamsin herself and she'll sign it then and there.</p>
+      <div class="buy"><a class="btn" href="https://falstaffbooks.myshopify.com/products/untold-legends-platinum-edition">Falstaff store</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band lincoln" id="lincoln">
+  <div class="wrap">
+    <div>
+      <h2>Land of Entrapment</h2>
+      <p>It started in New York with a short story for a weird west anthology. Tamsin read up on Billy, clicked on John Tunstall's name, and kept going. She visited Lincoln, New Mexico, so many times that she moved to the state in 2017.</p>
+      <p>She has walked the town with a camera for anyone who can't get there. There's no phone signal in Lincoln, so the Tour Lincoln videos were filmed first and posted later.</p>
+      <div class="buy"><a class="btn alt" href="https://www.tamsinsilver.com/tour-lincoln">Tour Lincoln with Tamsin</a></div>
+    </div>
+    <figure>
+      <img src="img/coe.jpg" alt="Tamsin L. Silver under a tree in front of the adobe Coe Ranch house in New Mexico." width="1000" height="750" loading="lazy">
+      <figcaption>At the Coe Ranch, which belonged to Richard M. Brewer, first leader of the Regulators.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band worlds">
+  <div class="wrap">
+    <h2>Before Billy</h2>
+    <ul>
+      <li><a href="https://www.tamsinsilver.com/windfireseries">Windfire series</a><p>YA urban fantasy. At thirteen, Atlanta Hart starts having powers she can't explain.</p></li>
+      <li><a href="https://www.tamsinsilver.com/skye-of-the-damned-novel">Skye of the Damned</a><p>The novel of the Skye of the Damned web series, with the Season One ending they never had the money to film.</p></li>
+      <li><a href="https://www.tamsinsilver.com/moon-over-manhattan">Moon Over Manhattan</a><p>Denika Petrovskii, the first female Alpha of Manhattan's West Side pack.</p></li>
+      <li><a href="https://www.tamsinsilver.com/shortstories">Short stories and anthologies</a><p>Including “The Curse of Scáthach”, the story Billy's books grew out of.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band about">
+  <div class="wrap">
+    <h2>Tamsin</h2>
+    <p>Tamsin grew up in Michigan, lived in both Carolinas and New York City, and now lives in Albuquerque. She has a BA in Theatre and Secondary Education from Winthrop University and has taught middle and high school drama.</p>
+    <p>She writes around a day job in healthcare, shifts at Barnes &amp; Noble, a demanding Australian Shepherd and a lazy black cat.</p>
+  </div>
+</section>
+
+<section class="band close">
+  <div class="wrap">
+    <h2>Ride along</h2>
+    <p>Tamsin sits on panels at Dragon Con and other cons, and some of them are filmed. Day to day she's on Instagram at <a href="https://www.instagram.com/tamsin.silver/">@tamsin.silver</a>.</p>
+    <div class="buy"><a class="btn" href="https://www.tamsinsilver.com/convention-panels">Watch her panels</a><a class="btn alt" href="https://www.youtube.com/user/TamsinSilver">YouTube</a></div>
+  </div>
+</section>
+</main>
+
+<details class="toc">
+  <summary aria-label="Contents"><img src="img/corner.jpg" alt="" width="120" height="121"></summary>
+  <nav aria-label="Contents">
+    <a href="#hero">The cover</a>
+    <a href="#eras">1878 and 1949</a>
+    <a href="#legends">The three books</a>
+    <a href="#lincoln">Lincoln, NM</a>
+  </nav>
+</details>
+
+<footer>A mockup made by Sparsh Saini for Tamsin L. Silver. Not affiliated, not live.</footer>
+
+<script>
+(function(){
+  var hero=document.getElementById('hero'), book=hero.querySelector('.book');
+  var q=function(s){return hero.querySelector(s)};
+  var skull=q('.skull'), land=q('.land'), full=q('.full'), words=q('.words'), side=q('.side');
+  var toc=document.querySelector('.toc');
+  toc.querySelector('nav').addEventListener('click',function(e){ if(e.target.tagName==='A') toc.open=false; });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') toc.open=false; });
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clamp=function(v){return v<0?0:v>1?1:v}, seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  var top=0, span=1, ticking=false;
+  var Z=3.2;
+  function measure(){ top=hero.offsetTop; span=hero.offsetHeight-innerHeight; Z=innerWidth<=820?3.5:3.2; }
+  function draw(p){
+    // 1: held on the empty sun while the skull surfaces; 2: the camera drops back and the land closes in; 3: the printed cover
+    var s1=ease(seg(p,.04,.42));
+    skull.style.opacity=s1.toFixed(3);
+    skull.style.transform='translateY('+(6*(1-s1)).toFixed(2)+'%) scale('+(1.14-.14*s1).toFixed(4)+')';
+    var cam=ease(seg(p,.4,.82)), s=Z-(Z-1)*cam;
+    book.style.transform='scale('+s.toFixed(4)+')';
+    var l=ease(seg(p,.38,.84));
+    land.style.transform='translateY('+(9*(1-l)).toFixed(2)+'%) scale('+(1.12-.12*l).toFixed(4)+')';
+    full.style.opacity=seg(p,.82,.92).toFixed(3);
+    var w=seg(p,.84,.96);
+    words.style.opacity=w.toFixed(3);
+    words.style.transform='translateY('+(14*(1-w)).toFixed(1)+'px)';
+    side.style.opacity=seg(p,.88,.98).toFixed(3);
+  }
+  function frame(){ ticking=false; draw(clamp((scrollY-top)/span)); }
+  hero.addEventListener('focusin',function(){ if(scrollY<top+span) scrollTo(0,top+span); });
+  measure();
+  addEventListener('resize',function(){ measure(); if(!reduce) frame(); });
+  if(reduce){ draw(1); return; }
+  frame();
+  addEventListener('scroll',function(){ if(!ticking){ticking=true;requestAnimationFrame(frame);} },{passive:true});
+})();
+</script>
+</body>
+</html>
